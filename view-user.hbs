@@ -1,0 +1,49 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb bg-light p-3 rounded">
+    <li class="breadcrumb-item"><a href="/" class="text-decoration-none text-dark">Home</a></li>
+    <li class="breadcrumb-item active text-primary" aria-current="page">View User</li>
+  </ol>
+</nav>
+
+<div class="view-user p-4 bg-white shadow rounded">
+  {{#each rows}}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h3 class="text-dark">{{this.First_Name}} {{this.Last_Name}}</h3>
+      <hr style="width: 50%; margin: 10px auto; border: 1px solid #ddd;">
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{this.First_Name}}</th>
+            <td>{{this.Last_Name}}</td>
+            <td>{{this.Email}}</td>
+            <td>{{this.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <h5 class="text-secondary">Comments</h5>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col p-3 rounded" style="background-color: #f9f9f9; border: 1px solid #ddd;">
+      {{this.Comments}}
+    </div>
+  </div>
+  {{/each}}
+</div>
